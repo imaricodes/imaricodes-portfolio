@@ -1,16 +1,20 @@
-import React, { useRef, useContext, useEffect, useState, useLayoutEffect } from "react";
+import React, {
+  useRef,
+  useContext,
+  useEffect,
+  useState,
+  useLayoutEffect,
+} from "react";
 import { NavLink, useNavigate, useLocation } from "react-router-dom";
-import { HashLink } from 'react-router-hash-link';
+import { HashLink } from "react-router-hash-link";
 //TODO: Replace ion ion
 import { IonIcon } from "@ionic/react";
 import { menuOutline } from "ionicons/icons";
 import { closeOutline } from "ionicons/icons";
 
-
 const NavBar = () => {
-
   const [menuActive, setMenuActive] = useState(false);
-  const [windowHeight, setWindowHeight] = useState(window.innerHeight)
+  const [windowHeight, setWindowHeight] = useState(window.innerHeight);
 
   const [currentLocation, setCurrentLocation] = useState(null);
 
@@ -20,30 +24,27 @@ const NavBar = () => {
   const menuToggleRef = useRef(null);
   const menuListRef = useRef(null);
 
-
   // const [size, setSize] = useState([0, 0]);
   useLayoutEffect(() => {
-
     function closeMobileMenu() {
       if (window.innerWidth > 768) {
         // console.log('closing mobile menu')
         if (menuActive === true) {
-          console.log('menu active state in layout effect: ', menuActive)
+          console.log("menu active state in layout effect: ", menuActive);
           menuToggleRef.current.icon = menuOutline;
           menuListRef.current.classList.add("hidden");
           menuListRef.current.classList.remove("nav-menu--slide-in");
-          setMenuActive(prev => !prev)
+          setMenuActive((prev) => !prev);
         }
       }
-      
+
       // setSize([window.innerWidth, window.innerHeight]);
     }
-    window.addEventListener('resize', closeMobileMenu);
+    window.addEventListener("resize", closeMobileMenu);
 
-    closeMobileMenu()
-    return () => window.removeEventListener('resize', closeMobileMenu);
+    closeMobileMenu();
+    return () => window.removeEventListener("resize", closeMobileMenu);
   }, [menuActive]);
-
 
   const handleMenu = () => {
     // menuToggleRef.current.icon === menuOutline
@@ -53,8 +54,8 @@ const NavBar = () => {
     //   : ((menuToggleRef.current.icon = menuOutline),
     //     menuListRef.current.classList.add("hidden"),
     //     menuListRef.current.classList.remove("nav-menu--slide-in"));
-    setMenuActive( prev => !prev);
-    setWindowHeight(window.innerHeight)
+    setMenuActive((prev) => !prev);
+    setWindowHeight(window.innerHeight);
   };
 
   useEffect(() => {
@@ -64,15 +65,12 @@ const NavBar = () => {
       menuListRef.current.classList.remove("hidden");
     }
 
-    if(!menuActive) {
+    if (!menuActive) {
       menuToggleRef.current.icon = menuOutline;
       menuListRef.current.classList.add("hidden");
       menuListRef.current.classList.remove("nav-menu--slide-in");
     }
   }, [menuActive]);
-
-
-
 
   const handleNavLinkClick = (e) => {
     console.log(
@@ -80,12 +78,11 @@ const NavBar = () => {
       e.target.textContent || e.target.innerText
     );
     console.log("handleNavLinkClick clicked");
- 
   };
 
   return (
- 
-      <nav className="navbar relative mb-8 min-w-[320px] sm:mb-10 md:mb-12 md:flex md:justify-between lg:mb-16 xl:mb-20 w-full ">
+    <div className="absolute top-0 z-10 w-full">
+      <nav className="navbar relative min-w-[320px] sm:mb-10 md:mb-12 md:flex md:justify-between lg:mb-16 xl:mb-20 w-full ">
         {/* Logo */}
 
         <NavLink
@@ -120,7 +117,8 @@ const NavBar = () => {
             <li className="mx-4 my-6 md:my-0 ">
               <HashLink
                 // to="about"
-                smooth to="/#projects"
+                smooth
+                to="/#projects"
                 className="nav-link text-xl  duration-200"
                 onClick={handleNavLinkClick}
               >
@@ -129,7 +127,8 @@ const NavBar = () => {
             </li>
             <li className=" mx-4 my-6 md:my-0">
               <HashLink
-                smooth to="/#skills"
+                smooth
+                to="/#skills"
                 className="nav-link text-xl duration-200"
                 onClick={handleNavLinkClick}
               >
@@ -139,7 +138,7 @@ const NavBar = () => {
           </ul>
         </div>
       </nav>
-
+    </div>
   );
 };
 
