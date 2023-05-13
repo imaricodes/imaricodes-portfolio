@@ -4,10 +4,13 @@ import projectIMGTemp from "../assets/project-echo-reader.png";
 
 const Projects = () => {
   return (
-    <section id="projects" className=" ml-8 mr-8">
-      <h2 className="underline-that">Projects</h2>
+    <section id="projects" className=" ml-8 mr-8 pt-16">
+      <div className="section-title relative mb-6 ">
 
-      <div className="flex flex-col justify-center gap-40  ">
+      <h2 className="pb-5" >Projects</h2>
+      </div>
+
+      <div className="flex flex-col justify-center gap-40 ">
         <Card
           key={1}
           style={

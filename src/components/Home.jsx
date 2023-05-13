@@ -4,7 +4,7 @@ import Skills from './Skills'
 
 const Home = () => {
   return (
-    <div className='flex flex-col relative w-full'>
+    <div className='flex flex-col relative  xl:ml-[300px]'>
     
         <Projects />
         <Skills />

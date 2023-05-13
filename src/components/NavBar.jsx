@@ -9,68 +9,15 @@ import { NavLink, useNavigate, useLocation } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 //TODO: Replace ion ion
 import { IonIcon } from "@ionic/react";
-import { menuOutline } from "ionicons/icons";
-import { closeOutline } from "ionicons/icons";
+import { homeOutline } from "ionicons/icons";
+import { globeOutline } from "ionicons/icons";
+import { hammerOutline } from "ionicons/icons";
+import icDotsIMG from "../assets/ic-dots.jpg";
 
 const NavBar = () => {
-  const [menuActive, setMenuActive] = useState(false);
-  const [windowHeight, setWindowHeight] = useState(window.innerHeight);
-
-  const [currentLocation, setCurrentLocation] = useState(null);
-
   const location = useLocation();
   const navigate = useNavigate();
-
-  const menuToggleRef = useRef(null);
   const menuListRef = useRef(null);
-
-  // const [size, setSize] = useState([0, 0]);
-  useLayoutEffect(() => {
-    function closeMobileMenu() {
-      if (window.innerWidth > 768) {
-        // console.log('closing mobile menu')
-        if (menuActive === true) {
-          console.log("menu active state in layout effect: ", menuActive);
-          menuToggleRef.current.icon = menuOutline;
-          menuListRef.current.classList.add("hidden");
-          menuListRef.current.classList.remove("nav-menu--slide-in");
-          setMenuActive((prev) => !prev);
-        }
-      }
-
-      // setSize([window.innerWidth, window.innerHeight]);
-    }
-    window.addEventListener("resize", closeMobileMenu);
-
-    closeMobileMenu();
-    return () => window.removeEventListener("resize", closeMobileMenu);
-  }, [menuActive]);
-
-  const handleMenu = () => {
-    // menuToggleRef.current.icon === menuOutline
-    //   ? ((menuToggleRef.current.icon = closeOutline),
-    //     menuListRef.current.classList.add("nav-menu--slide-in"),
-    //     menuListRef.current.classList.remove("hidden"))
-    //   : ((menuToggleRef.current.icon = menuOutline),
-    //     menuListRef.current.classList.add("hidden"),
-    //     menuListRef.current.classList.remove("nav-menu--slide-in"));
-    setMenuActive((prev) => !prev);
-    setWindowHeight(window.innerHeight);
-  };
-
-  useEffect(() => {
-    if (menuActive) {
-      menuToggleRef.current.icon = closeOutline;
-      menuListRef.current.classList.add("nav-menu--slide-in");
-      menuListRef.current.classList.remove("hidden");
-    }
-
-    if (!menuActive) {
-      menuToggleRef.current.icon = menuOutline;
-      menuListRef.current.classList.add("hidden");
-      menuListRef.current.classList.remove("nav-menu--slide-in");
-    }
-  }, [menuActive]);
 
   const handleNavLinkClick = (e) => {
     console.log(
@@ -81,40 +28,41 @@ const NavBar = () => {
   };
 
   return (
-    <div className="absolute top-0 z-10 w-full">
-      <nav className="navbar relative min-w-[320px] sm:mb-10 md:mb-12 md:flex md:justify-between lg:mb-16 xl:mb-20 w-full ">
-        {/* Logo */}
-
+    <nav className=" relative mt-6  ">
+      <div className="flex flex-col items-center mb-10">
         <NavLink
           to="/"
           className="flex  cursor-pointer items-center px-4 pt-4 text-4xl font-bold md:px-14 "
           onClick={handleNavLinkClick}
         >
-          Echo Readerbeta
-        </NavLink>
-
-        {/* Hanburger Menu */}
-        <div className="absolute right-3 top-5 z-[200] block cursor-pointer text-3xl md:hidden">
-          <IonIcon
-            icon={menuOutline}
-            onClick={handleMenu}
-            ref={menuToggleRef}
+          <img
+            src={icDotsIMG}
+            alt="ic-dots"
+            className="h-40 w-40 border-solid  border-8 border-orange-400 bg-yellow-50 rounded-full flex justify-center items-center mb-6"
           />
-        </div>
+        </NavLink>
+        <h1 className="font-poppins text-2xl font-semibold">Imari Childress</h1>
+      </div>
 
-        {/* Links */}
-        <div ref={menuListRef} className="nav-menu  md:flex ">
-          <ul className=" flex flex-col text-center font-semibold md:flex md:flex-row md:items-center md:pr-14 ">
-            <li className="nav-link mx-4 my-6 md:my-0 ">
+      {/* Links */}
+      <div ref={menuListRef} className="nav-menu  ">
+        <ul className=" flex flex-col font-openSans font-extralight  ">
+          <li className="nav-link mx-4 my-6 ">
+            
               <NavLink
                 to="/"
                 className="text-xl duration-200"
                 onClick={handleNavLinkClick}
               >
-                Home
+                <span className="flex items-center w-full gap-4">
+                <IonIcon icon={homeOutline} className="" />
+                 Home
+                 </span>
               </NavLink>
-            </li>
-            <li className="mx-4 my-6 md:my-0 ">
+          
+          </li>
+          <li className="mx-4 my-6 ">
+            <span className="flex items-center">
               <HashLink
                 // to="about"
                 smooth
@@ -122,23 +70,31 @@ const NavBar = () => {
                 className="nav-link text-xl  duration-200"
                 onClick={handleNavLinkClick}
               >
+                <span className="flex items-center w-full gap-4">
+                <IonIcon icon={globeOutline} className="" />
                 Projects
+                </span>
               </HashLink>
-            </li>
-            <li className=" mx-4 my-6 md:my-0">
+            </span>
+          </li>
+          <li className=" mx-4 my-6">
+            <span>
               <HashLink
                 smooth
                 to="/#skills"
                 className="nav-link text-xl duration-200"
                 onClick={handleNavLinkClick}
               >
-                Skills
+                  <span className="flex items-center w-full gap-4">
+                <IonIcon icon={hammerOutline} className="" />
+                Skills / Tools
+                </span>
               </HashLink>
-            </li>
-          </ul>
-        </div>
-      </nav>
-    </div>
+            </span>
+          </li>
+        </ul>
+      </div>
+    </nav>
   );
 };
 
