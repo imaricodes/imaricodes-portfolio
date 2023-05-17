@@ -73,18 +73,7 @@ button:focus-visible {
 @tailwind components;
 @tailwind utilities;
 
-/* section titles */
-h2 {
-  font-family: "raleway", sans-serif;
-  font-size: 32px;
-  font-weight: 700;
-}
 
-h3 {
-  font-family: "raleway", sans-serif;
-  font-size: 50px;
-  font-weight: 700;
-}
 
 p {
   font-family: "opensans", sans-serif;
@@ -94,52 +83,67 @@ p {
 /* Card */
 @layer components {
   .card {
-    @apply overflow-hidden rounded-lg py-8 shadow-lg;
+    @apply overflow-hidden  rounded-lg py-8 shadow-lg;
   }
 
-  .card-project-card {
-    @apply px-14 flex-wrap;
+  .card.card__project {
+    @apply px-14 flex-wrap flex flex-col;
+  }
+
+  .card__project__content-container{
+    @apply mb-32
+  }
+
+  .card__project__content {
+    @apply flex flex-col  xl:flex-row xl:gap-8 xl:px-3 xl:mb-14;
+  }
+
+  .card__project__info {
+    @apply xl:flex-1 xl:px-0 xl:pt-6;
+  }
+  .card__project__info h3 {
+    @apply mb-4 font-raleway text-4xl font-bold;
+  }
+
+  .card__project__media {
+    @apply mb-6 xl:flex-1;
+  }
+
+  .card__project__more {
+    @apply inline-block w-full text-right mb-8;
+  }
+
+  .card__project__links {
+    @apply flex justify-center gap-10;
   }
 }
 
-/* Button */
+/* Buttons */
 @layer components {
   .btn {
-    @apply inline-block px-6 py-4 rounded-sm shadow-lg bg-orange-400 text-white;
+    @apply inline-block px-5 text-lg  py-4 rounded-sm shadow-lg bg-orange-400 text-white;
   }
-
-
 }
 
+/* Section */
 
-
-
-.section-title h2::after {
-	content: "";
-	position: absolute;
-	display: block;
-	width: 50px;
-	height: 3px;
-	background: #FB923B;
-	bottom: 0;
-	left: 0;
+.section {
+  @apply py-20 px-5;
 }
 
-.underline-that::after {
-  position: absolute;
+.section__title {
+  @apply mb-16 relative;
+}
+.section__title h2 {
+  @apply text-5xl font-bold font-raleway;
+}
+
+.section__title h2::after {
   content: "";
-  height: 2px;
-  /* adjust this to move up and down. you may have to adjust the line height of the paragraph if you move it down a lot. */
-  bottom: -4px;
-
-  /****** 
-       optional values below 
-       ******/
-
-  /* center - (optional) use with adjusting width   */
-  margin: 0 auto;
-  left: 0;
-  right: 0;
-  width: 50%;
-  background: green;
+  position: absolute;
+  display: block;
+  width: 70px;
+  height: 3px;
+  background: #fb923b;
+  bottom: 0;
 }

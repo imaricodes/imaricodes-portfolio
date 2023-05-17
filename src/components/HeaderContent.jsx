@@ -11,8 +11,8 @@ const HeaderContent = () => {
         <div className="pt-24 flex lg:px-24 2xl:px-40 justify-center  h-full xl:ml-[300px] xl:mr-[100px]">
           <div className="text-left text-white px-6 md:px-12">
             <h1 className="text-5xl  xl:text-7xl font-bold tracking-tight mb-12">
-              Hello, I’m{" "}
-              <span className="text-orange-400">Imari Childress</span>
+              Hello, I’m
+              <span className="text-orange-400"> Imari</span>
               . <br />
               <span> May I join your team?</span>
             </h1>
