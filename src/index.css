@@ -175,14 +175,14 @@ p {
 
 @layer components {
   .skills {
-    @apply w-full flex flex-wrap justify-around  gap-10 sm:gap-16 lg:gap-20;
+    @apply w-full flex flex-wrap justify-evenly sm:justify-around  gap-10 sm:gap-16 lg:gap-20;
   }
 
   .skill-container {
     @apply flex flex-col justify-between items-center;
   }
   .skill-container__icon-container {
-    @apply w-32 mb-4;
+    @apply w-20  mb-0;
   }
 
   .skill-containter__title {
