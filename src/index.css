@@ -73,8 +73,6 @@ button:focus-visible {
 @tailwind components;
 @tailwind utilities;
 
-
-
 p {
   font-family: "opensans", sans-serif;
   font-size: 16px;
@@ -95,14 +93,21 @@ p {
   }
 
   .card__project__content {
-    @apply flex flex-col  xl:flex-row xl:gap-8 xl:px-3 xl:mb-14;
+    @apply flex flex-col  xl:flex-row xl:gap-8 px-0 xl:px-3 xl:mb-14;
   }
 
   .card__project__info {
     @apply xl:flex-1 xl:px-0 xl:pt-6;
   }
   .card__project__info h3 {
-    @apply mb-4 font-raleway text-4xl font-bold;
+    @apply mb-3 font-raleway text-4xl font-bold;
+  }
+
+  .card__project__skills-container {
+    @apply flex flex-row gap-2 mb-6;
+  }
+  .card__project__skills-container img {
+    @apply w-6;
   }
 
   .card__project__media {
@@ -116,12 +121,15 @@ p {
   .card__project__links {
     @apply flex justify-center gap-10;
   }
+  .card__project__links__button {
+    @apply btn flex-1 whitespace-nowrap xs:flex-none;
+  }
 }
 
 /* Buttons */
 @layer components {
   .btn {
-    @apply inline-block px-5 text-lg  py-4 rounded-sm shadow-lg bg-orange-400 text-white;
+    @apply inline-block py-2 px-2 sm:px-5 text-sm sm:text-lg sm:py-4 rounded-sm shadow-lg bg-orange-400 text-white;
   }
 }
 
@@ -146,4 +154,38 @@ p {
   height: 3px;
   background: #fb923b;
   bottom: 0;
+}
+
+/* Header */
+@layer components {
+  .header__content__container {
+    @apply md:pl-20  lg:pl-24 mr-[0px] sm:mr-[100px] md:mr-[150px] lg:mr-[200px] xl:mr-[250px];
+  }
+
+  .header__content__container--text {
+    @apply text-white text-left text-2xl  sm:text-5xl xl:text-6xl  2xl:text-7xl font-bold px-14;
+  }
+
+  .header__content__container__h1 {
+    @apply mb-10 tracking-wide leading-normal;
+  }
+}
+
+/* Skill icon */
+
+@layer components {
+  .skills {
+    @apply w-full flex flex-wrap justify-around  gap-10 sm:gap-16 lg:gap-20;
+  }
+
+  .skill-container {
+    @apply flex flex-col justify-between items-center;
+  }
+  .skill-container__icon-container {
+    @apply w-32 mb-4;
+  }
+
+  .skill-containter__title {
+    @apply whitespace-nowrap font-semibold;
+  }
 }

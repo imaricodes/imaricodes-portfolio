@@ -1,7 +1,9 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-const ProjectCard = ({ title, image, body, githubURL, liveURL }) => {
+const ProjectCard = ({ title, skill, image, body, githubURL, liveURL }) => {
+
+  console.log('skittles: ', skill );
   const imageAnimate = {
     offScreen: {
       y: 100,
@@ -70,9 +72,25 @@ const ProjectCard = ({ title, image, body, githubURL, liveURL }) => {
       <div className="card__project__content">
         <motion.div className=" card__project__media" variants={imageAnimate}>
           <img src={image} />
+          
         </motion.div>
         <div className="card__project__info">
           <motion.h3 variants={titleAnimate}>{title}</motion.h3>
+          <motion.div variants={titleAnimate} className="flex"
+          >
+         <motion.div className="card__project__skills-container flex items-center"
+          variants={titleAnimate}
+         >
+          <span className="font-semibold mr-2 text-orange-500">Technologies</span>
+         
+         {skill.map((skill, index) => {
+          console.log('index: ', index);
+              return <div key={index}><img src={skill} /></div> 
+           })}
+         </motion.div>
+          
+          </motion.div>
+         
           <motion.div className="animation" variants={infoBodyTextAnimate}>
             <p>
               {body}
@@ -83,8 +101,8 @@ const ProjectCard = ({ title, image, body, githubURL, liveURL }) => {
       </div>
 
       <motion.div className="card__project__links" variants={linksAnimate}>
-        <a href={liveURL} target="_blank" className="btn">Visit Site</a>
-        <a href={githubURL} target="_blank" className="btn">Github Repo</a>
+        <a href={liveURL} target="_blank" className="card__project__links__button">Visit Site</a>
+        <a href={githubURL} target="_blank" className="card__project__links__button">Github Repo</a>
       </motion.div>
     </motion.div>
   );

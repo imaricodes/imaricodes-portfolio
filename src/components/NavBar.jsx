@@ -14,7 +14,7 @@ import { globeOutline } from "ionicons/icons";
 import { hammerOutline } from "ionicons/icons";
 import icDotsIMG from "../assets/ic-dots.jpg";
 
-const NavBar = () => {
+const NavBar = (props) => {
   const location = useLocation();
   const navigate = useNavigate();
   const menuListRef = useRef(null);
@@ -25,10 +25,11 @@ const NavBar = () => {
       e.target.textContent || e.target.innerText
     );
     console.log("handleNavLinkClick clicked");
+    props.onLinkClick();
   };
 
   return (
-    <nav className=" relative mt-6  ">
+    <nav className="relative mt-6">
       <div className="flex flex-col items-center mb-10">
         <NavLink
           to="/"

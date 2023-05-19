@@ -10,28 +10,41 @@ const Header = () => {
   const navBarContainerRef = useRef(null);
   const menuIconRef = useRef(null);
 
+  useEffect(() => {
+    const handleResize = () => {
+      console.log("handleResize");
+      console.log("window.innerWidth", window.innerWidth);
+      console.log("window.innerHeight", window.innerHeight);
+      if (window.innerWidth > 1279) {
+        menuIconRef.current.icon === closeOutline
+          ? (menuIconRef.current.icon = menuOutline)
+          : null;
+        if (
+          !navBarContainerRef.current.classList.contains("-translate-x-[300px]")
+        ) {
+          navBarContainerRef.current.classList.add("-translate-x-[300px]");
+        }
+      }
+    };
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   const handleMenuClick = () => {
-    console.log("menu icon clicked");
-    // menuIcon.current.classList.toggle("bg-pink-200");
-    menuIconRef.current.icon === menuOutline ? (menuIconRef.current.icon = closeOutline) : (menuIconRef.current.icon = menuOutline)
+    menuIconRef.current.icon === menuOutline
+      ? (menuIconRef.current.icon = closeOutline)
+      : (menuIconRef.current.icon = menuOutline);
 
     navBarContainerRef.current.classList.toggle("-translate-x-[300px]");
   };
 
-
-
-  
-
-
-
   return (
-    // <div className="header-container h-screen bg-yellow-100">
-
-    <div className="relative h-screen bg-cover bg-fixed bg-no-repeat bg-right-top bg-hero">
+    // <div className="relative h-screen bg-cover bg-fixed bg-no-repeat bg-right-top bg-hero">
+    <div className="relative h-screen bg-cover  bg-fixed bg-no-repeat bg-right-top bg-heroSmall sm:bg-hero right ">
       {/* Hanburger Menu */}
       <div
         ref={menuIcon}
-        className="menu-icon fixed right-0 top-5 z-[200] block cursor-pointer text-3xl xl:hidden bg-pink-200 "
+        className={`menu-icon text-white absolute right-5 top-5 z-[200] block cursor-pointer text-5xl xl:hidden`}
       >
         <IonIcon
           icon={menuOutline}
@@ -44,12 +57,11 @@ const Header = () => {
           ref={navBarContainerRef}
           className="navbar-container fixed  -translate-x-[300px]  xl:translate-x-[0px]   transition-all duration-700 bg-slate-900 text-white top-0 left-0 bottom-0 z-10 w-[300px]"
         >
-          <NavBar />
+          <NavBar onLinkClick={handleMenuClick} />
         </div>
         <HeaderContent />
       </div>
     </div>
-    // </div>
   );
 };
 

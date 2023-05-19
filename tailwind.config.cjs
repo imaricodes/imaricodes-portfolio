@@ -13,6 +13,10 @@ module.exports = {
       'serif': [...defaultTheme.fontFamily.serif],
       'mono': [...defaultTheme.fontFamily.mono]
     },
+    screens: {
+      'xs': '475px',
+      ...defaultTheme.screens,
+    },
     extend: {
       fontFamily: {
         'openSans': ['opensans', 'sans-serif'],
@@ -20,7 +24,8 @@ module.exports = {
         'raleway': ['raleway', 'sans-serif'],
       },
       backgroundImage: {
-        'hero': "url('./assets/portfolio-hero.png')",
+        'hero': "url('./assets/portfolio-hero-bw-test.png')",
+        'heroSmall': "url('./assets/header-sm-test-img.png')",
       },
     },
   },
