@@ -122,7 +122,7 @@ p {
     @apply flex justify-center gap-10;
   }
   .card__project__links__button {
-    @apply btn flex-1 whitespace-nowrap xs:flex-none;
+    @apply btn  text-center min-w-[92px] sm:py-2 whitespace-nowrap xs:flex-none  hover:bg-orange-300 focus:outline-none focus:ring-0 transition duration-150 ease-in-out;
   }
 }
 
@@ -167,7 +167,7 @@ p {
   }
 
   .header__content__container__h1 {
-    @apply mb-10 tracking-wide leading-normal;
+    @apply mb-10 tracking-wide leading-normal md:leading-tight;
   }
 }
 

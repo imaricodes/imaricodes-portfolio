@@ -1,9 +1,5 @@
 import React, {
-  useRef,
-  useContext,
-  useEffect,
-  useState,
-  useLayoutEffect,
+  useRef
 } from "react";
 import { NavLink, useNavigate, useLocation } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";

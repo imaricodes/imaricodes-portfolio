@@ -10,7 +10,7 @@ const HeaderContent = () => {
       >
         <div className="pt-24  md:pt-32 flex  justify-center  h-full xl:ml-[300px]">
           <div className=".header__content__container header__content__container--text ">
-            <h1 className="header__content__container__h1">
+            <h1 className="header__content__container__h1 md:mb-20">
               Hello, I’m
               <span className="text-orange-400"> Imari</span>
               . 

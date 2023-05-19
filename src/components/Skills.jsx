@@ -5,7 +5,6 @@ import SkillsIcons from "../assets/SkillsIcons";
 const Skills = () => {
   const imageAnimate = {
     offScreen: {
-      // y: 100,
       opacity: 0,
     },
     onScreen: {
@@ -13,7 +12,6 @@ const Skills = () => {
       opacity: 1,
       transition: {
         duration: 0.5,
-        type: "spring",
       },
     },
   };

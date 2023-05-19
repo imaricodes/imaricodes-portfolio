@@ -5,7 +5,6 @@ import {
   createRoutesFromElements,
   RouterProvider,
 } from "react-router-dom";
-import ScrollToHashElement from "./ScrollToHashElement";
 import Home from "./components/Home";
 
 export default function App() {
@@ -21,7 +20,6 @@ export default function App() {
   return (
     <div className="App">
       <div className="site-wrapper ">
-        {/* Roueter provider will load componenets */}
         <RouterProvider router={router} />
       </div>
     </div>
