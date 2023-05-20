@@ -66,7 +66,7 @@ const ProjectCard = ({ title, skill, image, body, githubURL, liveURL }) => {
         className="mb-12"
         initial={"offScreen"}
         whileInView={"onScreen"}
-        viewport={{ once: true, amount: 0.3 }}
+        viewport={{ once: true, amount: 0.5 }}
         transition={{ staggerChildren: 0.25 }}
       >
         <div className="card__project__content">

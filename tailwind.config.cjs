@@ -17,6 +17,10 @@ module.exports = {
       'xs': '475px',
       ...defaultTheme.screens,
     },
+    content: {
+      'icon': "url('./assets/skills-icons/icon-git.svg')",
+      ...defaultTheme.content,
+    },
     extend: {
       fontFamily: {
         'openSans': ['opensans', 'sans-serif'],
@@ -27,6 +31,7 @@ module.exports = {
         'hero': "url('./assets/portfolio-hero-bw-test.png')",
         'heroSmall': "url('./assets/header-sm-test-img.png')",
       },
+   
     },
   },
   plugins: [],

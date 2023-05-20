@@ -1,73 +1,9 @@
 /* :root {
-  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: 400;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+}
+*/
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
-}
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
-} */
 
 @tailwind base;
 @tailwind components;
@@ -89,7 +25,7 @@ p {
   }
 
   .card__project__content-container{
-    @apply mb-32
+    @apply mb-16
   }
 
   .card__project__content {
@@ -134,27 +70,29 @@ p {
 }
 
 /* Section */
+@layer components {
+  .section {
+    @apply py-20 px-5;
+  }
+  .section__title {
+    @apply mb-10 relative;
+  }
 
-.section {
-  @apply py-20 px-5;
+  .section__title h2 {
+    @apply text-5xl font-bold font-raleway;
+  }
+
+  .section__title h2::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 70px;
+    height: 3px;
+    background: #fb923b;
+    bottom: 0;
+  }
 }
 
-.section__title {
-  @apply mb-16 relative;
-}
-.section__title h2 {
-  @apply text-5xl font-bold font-raleway;
-}
-
-.section__title h2::after {
-  content: "";
-  position: absolute;
-  display: block;
-  width: 70px;
-  height: 3px;
-  background: #fb923b;
-  bottom: 0;
-}
 
 /* Header */
 @layer components {
@@ -171,7 +109,7 @@ p {
   }
 }
 
-/* Skill icon */
+/* Skills Section */
 
 @layer components {
   .skills {
@@ -187,5 +125,21 @@ p {
 
   .skill-containter__title {
     @apply whitespace-nowrap font-semibold;
+  }
+}
+
+/* Contact Section */
+
+@layer components {
+  .contact {}
+
+  .contact-item-icon::before {
+    @apply float-left  w-10 mt-2 mr-8;
+  }
+  .contact h4 {
+    @apply font-raleway font-semibold text-2xl;
+  }
+  .contact p {
+    @apply font-openSans text-sm;
   }
 }

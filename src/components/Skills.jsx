@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import SkillsIcons from "../assets/SkillsIcons";
+import SkillsIcons from "../assets/skills-icons/SkillsIcons";
 
 const Skills = () => {
   const imageAnimate = {

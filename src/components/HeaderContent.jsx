@@ -1,5 +1,3 @@
-import React from "react";
-import portfolioHereo from "../assets/portfolio-hero.png";
 
 const HeaderContent = () => {
   return (
@@ -15,10 +13,7 @@ const HeaderContent = () => {
               <span className="text-orange-400"> Imari</span>
               . 
             </h1>
-            {/* <h1 className=" tracking-wide mb-10 leading-[2rem] sm:leading-[3rem] xl:leading-[4rem] 2xl:leading-[5rem]">
-             
-             May I join your team?
-            </h1> */}
+
             <h1 className="header__content__container__h1">
               I am a
               <span className="text-orange-400"> front-end web developer </span>
