@@ -1,5 +1,6 @@
 import React from "react";
 import SkillsIcons from "../assets/skills-icons/SkillsIcons";
+import { FaBeer } from "react-icons/fa";
 
 const Contact = () => {
   return (
@@ -11,6 +12,7 @@ const Contact = () => {
       <p>Detroit, MI, United States</p>
     </div>
     <div className="Email">
+      <FaBeer />
       <a href="mailto:imaricodes@gmail.com" target="_blank cursor-pointer" className="contact-item-icon before:content-icon" />
       <h4>Email</h4>
       <p>imaricodes@gmail.com</p>
