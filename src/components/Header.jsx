@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from "react";
 import NavBar from "./NavBar";
-import HeaderContent from "./HeaderContent";
 import { IonIcon } from "@ionic/react";
 import { menuOutline } from "ionicons/icons";
 import { closeOutline } from "ionicons/icons";
@@ -12,9 +11,6 @@ const Header = () => {
 
   useEffect(() => {
     const handleResize = () => {
-      console.log("handleResize");
-      console.log("window.innerWidth", window.innerWidth);
-      console.log("window.innerHeight", window.innerHeight);
       if (window.innerWidth > 1279) {
         menuIconRef.current.icon === closeOutline
           ? (menuIconRef.current.icon = menuOutline)
@@ -39,8 +35,7 @@ const Header = () => {
   };
 
   return (
-    // <div className="relative h-screen bg-cover bg-fixed bg-no-repeat bg-right-top bg-hero">
-    <div className="relative h-screen bg-cover  bg-fixed bg-no-repeat bg-right-top bg-heroSmall sm:bg-hero right ">
+    <div className=" ">
       {/* Hanburger Menu */}
       <div
         ref={menuIcon}
@@ -59,7 +54,6 @@ const Header = () => {
         >
           <NavBar onLinkClick={handleMenuClick} />
         </div>
-        <HeaderContent />
       </div>
     </div>
   );

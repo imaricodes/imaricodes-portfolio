@@ -2,7 +2,6 @@ import React from "react";
 import { motion } from "framer-motion";
 
 const ProjectCard = ({ title, skill, image, body, githubURL, liveURL }) => {
-  console.log("skittles: ", skill);
   const imageAnimate = {
     offScreen: {
       y: 100,
@@ -85,7 +84,6 @@ const ProjectCard = ({ title, skill, image, body, githubURL, liveURL }) => {
                 </span>
 
                 {skill.map((skill, index) => {
-                  console.log("index: ", index);
                   return (
                     <div key={index}>
                       <img src={skill} />

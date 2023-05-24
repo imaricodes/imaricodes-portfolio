@@ -17,7 +17,7 @@ p {
 /* Card */
 @layer components {
   .card {
-    @apply overflow-hidden  rounded-lg py-8 shadow-lg;
+    @apply overflow-hidden  rounded-lg py-8 shadow-lg bg-white;
   }
 
   .card.card__project {
@@ -95,16 +95,20 @@ p {
 
 
 /* Header */
+
 @layer components {
-  .header__content__container {
+  .hero__content__container{
+
+  }
+  .hero__content__container--margins {
     @apply md:pl-20  lg:pl-24 mr-[0px] sm:mr-[100px] md:mr-[150px] lg:mr-[200px] xl:mr-[250px];
   }
 
-  .header__content__container--text {
+  .hero__content__container--text {
     @apply text-white text-left text-2xl  sm:text-5xl xl:text-6xl  2xl:text-7xl font-bold px-14;
   }
 
-  .header__content__container__h1 {
+  .hero__content__container__h1 {
     @apply mb-10 tracking-wide leading-normal md:leading-tight;
   }
 }
