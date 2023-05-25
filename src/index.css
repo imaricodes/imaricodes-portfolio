@@ -119,7 +119,7 @@ p {
   }
 
   .hero__content__container--text {
-    @apply text-white text-left text-2xl  sm:text-5xl xl:text-6xl  2xl:text-7xl font-bold px-14;
+    @apply text-white text-left text-4xl  sm:text-5xl xl:text-6xl  2xl:text-7xl font-bold px-14;
   }
 
   .hero__content__container__h1 {

@@ -1,13 +1,13 @@
 import React from "react";
-import SkillsIcons from "../assets/skills-icons/SkillsIcons";
 import { IonIcon } from "@ionic/react";
 import { locationOutline } from "ionicons/icons";
+import { mailOutline } from "ionicons/icons";
 
 const Contact = () => {
   return (
-    <div className="card px-10">
+    <div className="card px-10 mb-28">
     <div className="contact flex flex-col gap-10">
-      <div className="location flex items-center ">
+      <div className="flex items-center ">
         <a className="contact__left mr-10 flex  items-center justify-center  h-10 w-10 rounded-full bg-slate-900  text-white "
          href="https://www.google.com/maps/search/?api=1&query=detroit%2C+Michigan"
          target="_blank cursor-pointer"
@@ -29,13 +29,13 @@ const Contact = () => {
           <p>Detroit, MI, United States</p>
         </div>
       </div>
-      <div className="email flex items-center ">
+      <div className="flex items-center ">
         <a className="contact__left mr-10 flex  items-center justify-center  h-10 w-10 rounded-full bg-slate-900  text-white "
          href="https://www.google.com/maps/search/?api=1&query=detroit%2C+Michigan"
          target="_blank cursor-pointer"
         
         >
-        <IonIcon icon={locationOutline} />
+        <IonIcon icon={mailOutline} />
         </a>
         <div className="contact__right">
           <a
