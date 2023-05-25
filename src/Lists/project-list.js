@@ -15,7 +15,7 @@ const projectList = [
     image: EchoReaderProject,
     body: " Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
     githubURL: "https//github.com",
-    liveURL: "https://cars.com",
+    liveURL: "https://echoreader.imaricodes.com/",
   },
   {
     id: 1,
@@ -29,7 +29,7 @@ const projectList = [
     image: ChipotleModalProject,
     body: " Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
     githubURL: "https://github.com",
-    liveURL: "https://cars.com",
+    liveURL: "http://chipotle-modal-clone.s3-website.us-east-2.amazonaws.com/",
   },
 ];
 
