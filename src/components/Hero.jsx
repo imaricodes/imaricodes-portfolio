@@ -1,4 +1,5 @@
 import { useRef, useEffect } from "react";
+import { HashLink } from "react-router-hash-link";
 
 const Hero = () => {
   const heroWrapperRef = useRef(null);
@@ -48,7 +49,7 @@ const Hero = () => {
       >
         <div className="pt-24  md:pt-32 flex  justify-center  h-full xl:ml-[300px]">
           <div className="hero__content__container hero__content__container--margins hero__content__container--text ">
-            <h1 className="hero__content__container__h1 md:mb-20">
+            <h1 className="hero__content__container__h1 xs:mb-32 sm:mb-20 md:mb-20">
               Hello, I’m
               <span className="text-orange-400"> Imari</span>.
             </h1>
@@ -60,14 +61,14 @@ const Hero = () => {
               <span className="text-orange-400"> technology</span> and
               <span className="text-orange-400"> learning</span>.
             </h1>
-            {/* <button
-              type="button"
-              className="inline-block absolute bottom-20  px-7 py-3 border-2 border-white text-white font-medium text-sm leading-snug uppercase rounded hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out"
-              data-mdb-ripple="true"
-              data-mdb-ripple-color="light"
-            >
-              Get started
-            </button> */}
+            {/* <HashLink smooth to="/#projects">
+              <button
+                type="button"
+                className="inline-block  bottom-20  px-7 py-3 border-2 border-white text-white font-medium text-sm leading-snug uppercase rounded hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out"
+              >
+                Portfolio
+              </button>
+            </HashLink> */}
           </div>
         </div>
       </div>

@@ -71,7 +71,6 @@ const NavBar = (props) => {
           <li className="mx-4 my-6 ">
             <span className="flex items-center">
               <HashLink
-                // to="about"
                 smooth
                 to="/#projects"
                 className="nav-link text-xl  duration-200"
