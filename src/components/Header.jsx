@@ -9,29 +9,48 @@ const Header = () => {
   const navBarContainerRef = useRef(null);
   const menuIconRef = useRef(null);
 
+
   useEffect(() => {
+
     const handleResize = () => {
+
       if (window.innerWidth > 1279) {
         menuIconRef.current.icon === closeOutline
           ? (menuIconRef.current.icon = menuOutline)
           : null;
-        if (
-          !navBarContainerRef.current.classList.contains("-translate-x-[300px]")
-        ) {
-          navBarContainerRef.current.classList.add("-translate-x-[300px]");
+
+          if (document.body.classList.contains('overflow-y-hidden')) {
+            document.body.classList.remove('overflow-y-hidden');
+          }
+      }
+
+    // position nav bar on or off screen,set menu icon state, based on window width
+      if (window.innerWidth < 1279) {
+        if (!navBarContainerRef.current.classList.contains(`-translate-x-[310px]`)) {
+          navBarContainerRef.current.classList.add(`-translate-x-[310px]`);
+        }
+
+        if (menuIconRef.current.icon === closeOutline) {
+          menuIconRef.current.icon = menuOutline;
         }
       }
+
     };
+
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   const handleMenuClick = () => {
-    menuIconRef.current.icon === menuOutline
-      ? (menuIconRef.current.icon = closeOutline)
-      : (menuIconRef.current.icon = menuOutline);
+    // setMobileNavActive(prev => !prev);
+    document.body.classList.toggle('overflow-y-hidden');
 
-    navBarContainerRef.current.classList.toggle("-translate-x-[300px]");
+    navBarContainerRef.current.classList.toggle(`-translate-x-[310px]`);
+
+    if (menuIconRef.current.icon === menuOutline) {
+      menuIconRef.current.icon = closeOutline
+    } else menuIconRef.current.icon = menuOutline;
+
   };
 
   return (
@@ -47,10 +66,10 @@ const Header = () => {
           ref={menuIconRef}
         />
       </div>
-      <div className="header  w-full  relative ">
+      <div className="header w-full relative ">
         <div
           ref={navBarContainerRef}
-          className="navbar-container fixed  -translate-x-[300px]  xl:translate-x-[0px]   transition-all duration-700 bg-slate-900 text-white top-0 left-0 bottom-0 z-10 w-[300px]"
+          className={`navbar-container px-4 fixed  -translate-x-[310px]  xl:translate-x-[0px] transition-all duration-700 bg-slate-900 text-white top-0 left-0 bottom-0 z-10 overflow-y-auto`}
         >
           <NavBar onLinkClick={handleMenuClick} />
         </div>

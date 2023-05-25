@@ -8,7 +8,7 @@ const RootLayout = () => {
     <div className="root-layout flex flex-col">
       <Header />
       <Hero />
-      <main>
+      <main className="overflow-y-hidden">
         <Outlet />
       </main>
 

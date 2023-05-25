@@ -94,14 +94,13 @@ p {
 }
 
 
-/* Header */
-
+/* Hero */
 @layer components {
   .hero__content__container{
 
   }
   .hero__content__container--margins {
-    @apply md:pl-20  lg:pl-24 mr-[0px] sm:mr-[100px] md:mr-[150px] lg:mr-[200px] xl:mr-[250px];
+    @apply md:pl-20  lg:pl-24 mr-[0px] sm:mr-[50px] md:mr-[150px] lg:mr-[200px] xl:mr-[250px];
   }
 
   .hero__content__container--text {

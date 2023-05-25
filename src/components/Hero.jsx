@@ -40,7 +40,7 @@ const Hero = () => {
   return (
     <div
       ref={heroWrapperRef}
-      className="hero-wrapper w-full min-h-screen bg-cover bg-hero bg-right-top relative "
+      className="hero-wrapper w-full min-h-screen bg-cover bg-hero bg-right-top relative mb-10 "
     >
       <div
         className="absolute top-0 right-0 bottom-0 left-0 w-full h-full "

@@ -1,6 +1,4 @@
-import React, {
-  useRef
-} from "react";
+import React, { useRef } from "react";
 import { NavLink, useNavigate, useLocation } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 //TODO: Replace ion ion
@@ -16,11 +14,6 @@ const NavBar = (props) => {
   const menuListRef = useRef(null);
 
   const handleNavLinkClick = (e) => {
-    console.log(
-      "console.log click target",
-      e.target.textContent || e.target.innerText
-    );
-    console.log("handleNavLinkClick clicked");
     props.onLinkClick();
   };
 
@@ -29,7 +22,7 @@ const NavBar = (props) => {
       <div className="flex flex-col items-center mb-10">
         <NavLink
           to="/"
-          className="flex  cursor-pointer items-center px-4 pt-4 text-4xl font-bold md:px-14 "
+          className="flex cursor-pointer items-center px-4 pt-4 text-4xl font-bold md:px-14 "
           onClick={handleNavLinkClick}
         >
           <img
@@ -45,18 +38,16 @@ const NavBar = (props) => {
       <div ref={menuListRef} className="nav-menu  ">
         <ul className=" flex flex-col font-openSans font-extralight  ">
           <li className="nav-link mx-4 my-6 ">
-            
-              <NavLink
-                to="/"
-                className="text-xl duration-200"
-                onClick={handleNavLinkClick}
-              >
-                <span className="flex items-center w-full gap-4">
+            <NavLink
+              to="/"
+              className="text-xl duration-200"
+              onClick={handleNavLinkClick}
+            >
+              <span className="flex items-center w-full gap-4">
                 <IonIcon icon={homeOutline} className="" />
-                 Home
-                 </span>
-              </NavLink>
-          
+                Home
+              </span>
+            </NavLink>
           </li>
           <li className="mx-4 my-6 ">
             <span className="flex items-center">
@@ -68,8 +59,8 @@ const NavBar = (props) => {
                 onClick={handleNavLinkClick}
               >
                 <span className="flex items-center w-full gap-4">
-                <IonIcon icon={globeOutline} className="" />
-                Projects
+                  <IonIcon icon={globeOutline} className="" />
+                  Projects
                 </span>
               </HashLink>
             </span>
@@ -82,9 +73,9 @@ const NavBar = (props) => {
                 className="nav-link text-xl duration-200"
                 onClick={handleNavLinkClick}
               >
-                  <span className="flex items-center w-full gap-4">
-                <IonIcon icon={hammerOutline} className="" />
-                Skills / Tools
+                <span className="flex items-center w-full gap-4">
+                  <IonIcon icon={hammerOutline} className="" />
+                  Skills / Tools
                 </span>
               </HashLink>
             </span>
