@@ -3,8 +3,6 @@
 }
 */
 
-
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -12,6 +10,16 @@
 p {
   font-family: "opensans", sans-serif;
   font-size: 16px;
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fade-in 0.25s ease-in forwards;
+}
+@keyframes fade-in {
+  100% {
+    opacity: 1;
+  }
 }
 
 /* Card */
@@ -24,8 +32,8 @@ p {
     @apply px-14 flex-wrap flex flex-col;
   }
 
-  .card__project__content-container{
-    @apply mb-16
+  .card__project__content-container {
+    @apply mb-16;
   }
 
   .card__project__content {
@@ -67,6 +75,14 @@ p {
   .btn {
     @apply inline-block py-2 px-2 sm:px-5 text-sm sm:text-lg sm:py-4 rounded-sm shadow-lg bg-orange-400 text-white;
   }
+
+  .btn__toTop {
+    @apply hidden h-10 w-10 rounded-full  text-sm sm:text-lg shadow-lg bg-slate-900 text-white;
+  }
+
+  .btn__toTop.active {
+    @apply flex justify-center items-center fixed bottom-5 right-5 z-[1000];
+  }
 }
 
 /* Section */
@@ -93,11 +109,9 @@ p {
   }
 }
 
-
 /* Hero */
 @layer components {
-  .hero__content__container{
-
+  .hero__content__container {
   }
   .hero__content__container--margins {
     @apply md:pl-20  lg:pl-24 mr-[0px] sm:mr-[50px] md:mr-[150px] lg:mr-[200px] xl:mr-[250px];
@@ -134,7 +148,8 @@ p {
 /* Contact Section */
 
 @layer components {
-  .contact {}
+  .contact {
+  }
 
   .contact-item-icon::before {
     @apply float-left  w-10 mt-2 mr-8;
