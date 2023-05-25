@@ -9,6 +9,7 @@ const SkillsIcons = {
     iconTailwindCSS : new URL('./icon-tailwindcss.svg', import.meta.url).href,
     iconVSCode : new URL('./icon-visual-studio-code.svg', import.meta.url).href,
     iconApi : new URL('./icon-api.svg', import.meta.url).href,
+    iconApiWhite : new URL('./icon-api-white.svg', import.meta.url).href,
 }
 
 

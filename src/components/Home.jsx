@@ -13,7 +13,7 @@ const Home = () => {
         </div>
         <Projects />
       </section>
-      <section id="skills" className=" ml-8 mr-8 pt-8">
+      <section id="skills" className=" ml-8 mr-8 pt-8 mb-10">
         <div className="section__title  ">
           <h2 className="pb-5">Skills</h2>
         </div>
