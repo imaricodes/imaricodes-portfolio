@@ -10,6 +10,8 @@ const SkillsIcons = {
     iconVSCode : new URL('./icon-visual-studio-code.svg', import.meta.url).href,
     iconApi : new URL('./icon-api.svg', import.meta.url).href,
     iconApiWhite : new URL('./icon-api-white.svg', import.meta.url).href,
+    iconDocker : new URL('./icon-docker.svg', import.meta.url).href,
+    iconDockerWhite : new URL('./icon-docker-white.svg', import.meta.url).href,
 }
 
 

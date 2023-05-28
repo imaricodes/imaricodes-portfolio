@@ -47,6 +47,9 @@ const NavBar = (props) => {
           <span className="w-5 text-white">
             <img src={SkillsIcons.iconApiWhite} />
           </span>
+          <span className="w-5 text-white">
+            <img src={SkillsIcons.iconDockerWhite} />
+          </span>
           <span className="w-5">
             <img src={SkillsIcons.iconGit} />
           </span>
