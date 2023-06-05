@@ -17,6 +17,7 @@ const projectList = [
     body: "The possibilities of combining speech to text and generative AI to support those learning to read are boundless. This application uses the Google Cloud speech-to-text API and ChatGPT to assess a user's oral reading. The UI is built using primarily React and Tailwind. Express, SocketIO, MediaStreaming Recording API and  are used to send data to the server for processing. The application is deployed on AWS.",
     githubURL: "https://github.com/imaricodes/echo-reader-2023",
     liveURL: "https://myechoreader.com/",
+   
   },
   {
     id: 1,
@@ -29,7 +30,7 @@ const projectList = [
     ],
     image: ChipotleModalProject,
     body: "This Chipotle modal clone is an exercise in recreating a pixel-perfect (pretty close) clone of a modal the Chipotle website uses to find nearby restaurants. One of the key things I learned doing this project is that the Google Maps API can be EXPENSIVE! I ran up a $150 data bill in two days of testing :(  The UI is built using React and Tailwind. All processing happens on the client side. The application is deployed on Google Cloud Run.",
-    githubURL: "https://github.com",
+    githubURL: "https://github.com/imaricodes/chipotle-map-modal-clone" ,
     liveURL: "https://restaurantlocationclone.com/",
   },
 ];
