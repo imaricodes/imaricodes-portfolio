@@ -2,6 +2,8 @@ import React from "react";
 import { motion } from "framer-motion";
 
 const ProjectCard = ({ title, skill, image, body, githubURL, liveURL }) => {
+
+  console.log('image', image)
   const imageAnimate = {
     offScreen: {
       y: 100,

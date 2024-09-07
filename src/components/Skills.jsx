@@ -55,9 +55,9 @@ const Skills = () => {
 
         <motion.div className="skill-container" variants={imageAnimate}>
           <div className="skill-container__icon-container">
-            <img src={SkillsIcons.iconDocker} alt="rest-api-icon" />
+            <img src={SkillsIcons.iconNextJS} alt="rest-api-icon" />
           </div>
-          <span className="skill-containter__title">Docker</span>
+          <span className="skill-containter__title">Next.js</span>
         </motion.div>
 
         <motion.div className="skill-container" variants={imageAnimate}>

@@ -12,6 +12,8 @@ const SkillsIcons = {
     iconApiWhite : new URL('./icon-api-white.svg', import.meta.url).href,
     iconDocker : new URL('./icon-docker.svg', import.meta.url).href,
     iconDockerWhite : new URL('./icon-docker-white.svg', import.meta.url).href,
+    iconNextJS : new URL('./icon-next-js.svg', import.meta.url).href,
+    iconMongoDB : new URL('./icon-mongodb.svg', import.meta.url).href,
 }
 
 
