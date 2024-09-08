@@ -59,7 +59,7 @@ const NavBar = (props) => {
       {/* Links */}
       <div ref={menuListRef} className="nav-menu  ">
         <ul className=" flex flex-col font-openSans font-extralight  ">
-          <li className="nav-link mx-4 my-6 ">
+          {/* <li className="nav-link mx-4 my-6 ">
             <NavLink
               to="/"
               className="text-xl duration-200"
@@ -70,7 +70,7 @@ const NavBar = (props) => {
                 Home
               </span>
             </NavLink>
-          </li>
+          </li> */}
           <li className="mx-4 my-6 ">
             <span className="flex items-center">
               <HashLink

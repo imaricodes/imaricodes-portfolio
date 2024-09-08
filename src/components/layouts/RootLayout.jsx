@@ -11,6 +11,7 @@ const RootLayout = () => {
   const heroRef = useRef(null);
   const toTopButtonRef = useRef(null);
 
+  // scroll to top
   useEffect(() => {
     window.addEventListener("scroll", () => {
       console.log("heroRef height", heroRef.current.clientHeight);
