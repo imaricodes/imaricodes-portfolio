@@ -16,7 +16,7 @@ const projectList = [
       SkillsIcons.iconApi,
     ],
     image: EmployeeMapProject,
-    body: "With this employee mapping dashboard, the user can create, edit, and delete employee data as well as place markers for each employee's location on a Google map. Open Street map is used for real time location serch. The application is built using Next.js and Mongodb.",
+    body: "With this employee mapping dashboard, the user can create, edit, and delete employee data as well as place markers for each employee's location on a Google map. Open Street map is used for real time location search. The application is built using Next.js and Mongodb.",
     githubURL: "https://github.com/imaricodes/mongo-crud-reference-2",
     liveURL: "https://mongo-crud-reference-2.vercel.app/",
 
@@ -45,7 +45,7 @@ const projectList = [
       SkillsIcons.iconTailwindCSS,
     ],
     image: MemorialProject,
-    body: "This website was created to memorilize the life of my father. The user may explore the webiste by selecting a decade from the image gallery or a menu. The images used are placeholders with plans to update in the future. The application is built using Next.js and Tailwind.",
+    body: "This website was created to memorialize the life of my father. The user may explore the webiste by selecting a decade from the image gallery or a menu. The images used are placeholders with plans to update in the future. The application is built using Next.js and Tailwind.",
     githubURL: "https://github.com/imaricodes/standaman-memorial" ,
     liveURL: "https://standaman-memorial-lemon.vercel.app/",
   },
