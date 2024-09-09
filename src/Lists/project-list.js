@@ -2,6 +2,7 @@ import InventoryTrackerProject from "../assets/inventory-tracker-project.png";
 import EmployeeMapProject from "../assets/employee-map-project.png";
 import SkillsIcons from "../assets/skills-icons/SkillsIcons";
 import MemorialProject from "../assets/memorial-project.png";
+import EchoReaderProject from "../assets/echo-reader-project.png";
 
 const projectList = [
   {
@@ -48,6 +49,20 @@ const projectList = [
     body: "This website was created to memorialize the life of my father. The user may explore the webiste by selecting a decade from the image gallery or a menu. The images used are placeholders with plans to update in the future. The application is built using Next.js and Tailwind.",
     githubURL: "https://github.com/imaricodes/standaman-memorial" ,
     liveURL: "https://standaman-memorial-lemon.vercel.app/",
+  },
+  {
+    id: 1,
+    title: "Echo Reader",
+    skills: [
+      SkillsIcons.iconReact,
+      SkillsIcons.iconCSS,
+      SkillsIcons.iconHTML5,
+      SkillsIcons.iconJavascript
+    ],
+    image: EchoReaderProject,
+    body: "Uses SocketIO and Assembly AI speech-to-text api to convert speech to text. OpenAI API is used to analyze user responses and give feedback on reading performance. The application is built using Next.js and Tailwind.",
+    githubURL: "https://github.com/imaricodes/-echo-reader-2024-assembly-version" ,
+    liveURL: "https://echo-reader-2024-assembly-version.onrender.com/",
   },
 ];
 
